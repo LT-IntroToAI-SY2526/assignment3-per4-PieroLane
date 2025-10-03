@@ -25,6 +25,16 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
         ],  # actors/actresses
     ),
     (
+        "interstellar",
+        "christopher nolan",
+        2014,
+        [
+            "matthew mcconaughey",
+            "jessica chastain",
+            "anne hathaway",
+        ],
+    ),
+    (
         "the big easy",
         "jim mcbride",
         1987,

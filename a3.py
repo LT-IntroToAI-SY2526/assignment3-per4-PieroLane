@@ -264,7 +264,13 @@ def search_pa_list(src: List[str]) -> List[str]:
         a list of answers. Will be ["I don't understand"] if it finds no matches and
         ["No answers"] if it finds a match but no answers
     """
-    pass
+    for pat, act in pa_list:
+        mat = match(pat, src)
+
+        if mat is not None:
+            answer = act(mat)
+            return answer if answer else ["No answers"]
+    return ["I dont understand"]
 
 
 def query_loop() -> None:
@@ -306,12 +312,13 @@ if __name__ == "__main__":
     ), "failed title_before_year test"
     assert isinstance(title_after_year(["1990"]), list), "title_after_year not returning a list"
     assert sorted(title_after_year(["1990"])) == sorted(
-        ["boyz n the hood", "dead again", "the crying game", "flirting", "malcolm x"]
+        ["boyz n the hood", "dead again", "the crying game", "flirting", "malcolm x", "interstellar"]
     ), "failed title_after_year test"
     assert isinstance(director_by_title(["jaws"]), list), "director_by_title not returning a list"
     assert sorted(director_by_title(["jaws"])) == sorted(
         ["steven spielberg"]
     ), "failed director_by_title test"
+    assert actors_by_director(["christopher nolan"]) == ["matthew mcconaughey", "jessica chastain", "anne hathaway",], "actors by director failed"
     assert isinstance(title_by_director(["steven spielberg"]), list), "title_by_director not returning a list"
     assert sorted(title_by_director(["steven spielberg"])) == sorted(
         ["jaws"]
