@@ -270,7 +270,7 @@ def search_pa_list(src: List[str]) -> List[str]:
         if mat is not None:
             answer = act(mat)
             return answer if answer else ["No answers"]
-    return ["I dont understand"]
+    return ["I don't understand"]
 
 
 def query_loop() -> None:
