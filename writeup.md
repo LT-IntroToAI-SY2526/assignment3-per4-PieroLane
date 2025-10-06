@@ -19,7 +19,7 @@ I learned about acion functions that help match certain words with the correspon
 
 
 2. How does the overall movie chatbot system work? Explain the flow from when a user types a query to when they receive an answer.
+The user types in a question and the chatbot matches the words you used to find the thing you asked for. The chatbot matches certain things with certain results to send them back to you.
 
 
-
-3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use? 
+3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use? A system like google does the same thing. It searches for match from your question and it searches it's database to find the results that you were asking for.
